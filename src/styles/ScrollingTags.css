@@ -1,0 +1,60 @@
+.scrolling-tags-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.scrolling-tags-track {
+    display: flex;
+    width: max-content;
+    gap: 12px;
+    animation: scroll-forward 30s linear infinite;
+}
+
+.scrolling-tags-container:hover .scrolling-tags-track {
+    animation-name: scroll-backward;
+}
+
+.scrolling-tag-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.scrolling-tag-item:hover {
+    border-color: var(--primary);
+    color: var(--text-main);
+    background-color: white;
+}
+
+@keyframes scroll-forward {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-33.33% - 4px));
+        /* Adjusted for gap */
+    }
+}
+
+@keyframes scroll-backward {
+    0% {
+        transform: translateX(calc(-33.33% - 4px));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
