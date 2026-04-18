@@ -159,9 +159,9 @@ export default function LandingPage() {
                                     aria-label="Download VitalsPlus on the App Store"
                                 >
                                     <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                                        src="https://www.logo.wine/a/logo/Apple_Inc./Apple_Inc.-Logo.wine.svg"
                                         alt=""
-                                        style={{ width: 24, height: 24, filter: 'invert(1)' }}
+                                        style={{ width: 24, height: 24 }}
                                         referrerPolicy="no-referrer"
                                     />
                                     <div className="btn-label">
@@ -265,7 +265,7 @@ export default function LandingPage() {
                             viewport={{ once: true }}
                             className="feature-text"
                         >
-                            <div className="feature-num">🧬 Core Feature 01</div>
+                            <div className="feature-num">Core Feature 01</div>
                             <h2>Upload any medical report in seconds</h2>
                             <p>Simply share any PDF lab report from your phone, email, or files app. VitalsPlus extracts all values automatically — no manual typing required.</p>
                             <ul className="feature-list" role="list">
@@ -315,7 +315,7 @@ export default function LandingPage() {
                             viewport={{ once: true }}
                             className="feature-text"
                         >
-                            <div className="feature-num">📈 Core Feature 02</div>
+                            <div className="feature-num">Core Feature 02</div>
                             <h2>Beautiful trend graphs for every metric</h2>
                             <p>See exactly how your health evolves over time. VitalsPlus automatically plots date-wise trends for every value extracted from your reports.</p>
                             <ul className="feature-list" role="list">
@@ -389,7 +389,7 @@ export default function LandingPage() {
                             viewport={{ once: true }}
                             className="feature-text"
                         >
-                            <div className="feature-num">👨‍👩‍👧‍👦 Core Feature 03</div>
+                            <div className="feature-num">Core Feature 03</div>
                             <h2>Manage your entire family's health in one place</h2>
                             <p>Create profiles for every family member — parents, children, grandparents. Switch between them instantly and track each person's unique health journey.</p>
                             <ul className="feature-list" role="list">
@@ -469,8 +469,8 @@ export default function LandingPage() {
             {/* Everything in VitalsPlus - Static Grid Version */}
             <section id="how-it-works" className="all-features-section">
                 <div className="container">
-                    <div className="section-header centered left-aligned">
-                        <div className="section-tag-pill">📋 Complete Feature List</div>
+                    <div className="section-header centered">
+                        <div className="section-tag-pill">Complete Feature List</div>
                         <h2 className="section-title-huge">Everything in <span>VitalsPlus</span></h2>
                         <p className="section-subtitle-muted">8 powerful capabilities built to give you full control over your health data.</p>
                     </div>
@@ -541,7 +541,7 @@ export default function LandingPage() {
             <section className="comparison-section">
                 <div className="container">
                     <div className="section-header centered">
-                        <div className="section-tag">📊 Comparison</div>
+                        <div className="section-tag">Comparison</div>
                         <h2 className="section-title">VitalsPlus vs everything else</h2>
                         <p className="section-subtitle">See why families choose VitalsPlus over paper files, scattered apps, and hospital portals.</p>
                     </div>
@@ -617,7 +617,7 @@ export default function LandingPage() {
             <section className="testimonials">
                 <div className="container">
                     <div className="section-header centered">
-                        <div className="section-tag">❤️ WALL OF LOVE</div>
+                        <div className="section-tag">WALL OF LOVE</div>
                         <h2 className="section-title">Loved by families everywhere</h2>
                     </div>
                     <div className="testimonials-scroll">
@@ -640,7 +640,7 @@ export default function LandingPage() {
             <section id="pricing" className="pricing">
                 <div className="container">
                     <div className="section-header centered">
-                        <div className="section-tag">💰 PRICING</div>
+                        <div className="section-tag">PRICING</div>
                         <h2 className="section-title">Health tracking for every family</h2>
                     </div>
                     <div className="pricing-grid">

@@ -105,6 +105,17 @@ button {
     margin-bottom: 24px;
 }
 
+.centered {
+    text-align: center;
+}
+
+.centered .section-title,
+.centered .section-subtitle,
+.centered .section-subtitle-muted {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .section-subtitle {
     font-size: 18px;
     color: var(--text-muted);
