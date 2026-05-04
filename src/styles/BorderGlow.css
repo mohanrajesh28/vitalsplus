@@ -1,76 +1,80 @@
 .border-glow-card {
-    position: relative;
-    display: block;
-    isolation: isolate;
-    border-radius: var(--border-radius);
-    background: var(--card-bg);
-    padding: 1px;
-    cursor: pointer;
-    overflow: visible;
-    --edge-proximity: 0;
-    --cursor-angle: 0deg;
-    --cone-spread: 35deg;
-    --fill-opacity: 0.1;
-    transition: background 0.3s ease;
+  position: relative;
+  display: block;
+  isolation: isolate;
+  border-radius: var(--border-radius);
+  background: var(--card-bg);
+  padding: 1px;
+  cursor: pointer;
+  overflow: visible;
+  --edge-proximity: 0;
+  --cursor-angle: 0deg;
+  --cone-spread: 35deg;
+  --fill-opacity: 0.1;
+  transition: background 0.3s ease;
 }
 
 .border-glow-inner {
-    position: relative;
-    z-index: 2;
-    border-radius: calc(var(--border-radius) - 1px);
-    background: var(--card-bg);
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  z-index: 2;
+  border-radius: calc(var(--border-radius) - 1px);
+  background: var(--card-bg);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .edge-light {
-    position: absolute;
-    inset: -1px;
-    z-index: 1;
-    border-radius: var(--border-radius);
-    pointer-events: none;
-    opacity: calc(var(--edge-proximity) / 100);
-    transition: opacity 0.3s ease;
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  border-radius: var(--border-radius);
+  pointer-events: none;
+  opacity: calc(var(--edge-proximity) / 100);
+  transition: opacity 0.3s ease;
 }
 
 .edge-light::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 1px;
-    border-radius: var(--border-radius);
-    background: conic-gradient(from var(--cursor-angle) at 50% 50%,
-            transparent 0deg,
-            var(--glow-color) calc(var(--cone-spread) / 2),
-            transparent var(--cone-spread));
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: var(--border-radius);
+  background: conic-gradient(
+    from var(--cursor-angle) at 50% 50%,
+    transparent 0deg,
+    var(--glow-color) calc(var(--cone-spread) / 2),
+    transparent var(--cone-spread)
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
 }
 
 .border-glow-card:hover {
-    background: rgba(37, 99, 235, 0.02);
+  background: rgba(37, 99, 235, 0.02);
 }
 
 .border-glow-card:hover .edge-light {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Background Highlight Fill */
 .border-glow-inner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: radial-gradient(circle at center,
-            var(--glow-color) 0%,
-            transparent 70%);
-    opacity: calc(var(--edge-proximity) / 100 * var(--fill-opacity));
-    transition: opacity 0.3s ease;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle at center,
+    var(--glow-color) 0%,
+    transparent 70%
+  );
+  opacity: calc(var(--edge-proximity) / 100 * var(--fill-opacity));
+  transition: opacity 0.3s ease;
 }
 
 .sweep-active .edge-light {
-    opacity: 1 !important;
+  opacity: 1 !important;
 }

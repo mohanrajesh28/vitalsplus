@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Activity, Globe, Users, QrCode } from 'lucide-react';
 import logoImage from '../assets/Group 221.png';
+import qrCodeImage from '../assets/qr_code.png';
+import vadaliLogo from '../assets/image.webp';
 import '../styles/Footer.css';
 
 export default function Footer() {
@@ -21,37 +22,13 @@ export default function Footer() {
                             className="footer-logo"
                         >
                             <img src={logoImage} alt="VitalsPlus Logo" style={{ height: '36px' }} />
-                            <span>VitalsPlus</span>
+                            <span>Vitals+</span>
                         </motion.div>
                         <p>Your family's health journey, simplified. Built with precision, designed for care.</p>
                         <div className="footer-brand-bottom">
-                            <div className="social-links">
-                                <motion.a
-                                    whileHover={{ y: -4, scale: 1.1 }}
-                                    href="#" className="social-icon"
-                                    aria-label="VitalsPlus on the Web"
-                                >
-                                    <Globe size={20} aria-hidden="true" />
-                                </motion.a>
-                                <motion.a
-                                    whileHover={{ y: -4, scale: 1.1 }}
-                                    href="#" className="social-icon"
-                                    aria-label="VitalsPlus Activity Feed"
-                                >
-                                    <Activity size={20} aria-hidden="true" />
-                                </motion.a>
-                                <motion.a
-                                    whileHover={{ y: -4, scale: 1.1 }}
-                                    href="#" className="social-icon"
-                                    aria-label="Connect with our Community"
-                                >
-                                    <Users size={20} aria-hidden="true" />
-                                </motion.a>
-                            </div>
-
                             <div className="footer-qr-wrapper">
                                 <div className="qr-code-square">
-                                    <QrCode size={48} strokeWidth={1.5} />
+                                    <img src={qrCodeImage} alt="Download VitalsPlus App" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                 </div>
                                 <div className="qr-text">
                                     <strong>Scan to download</strong>
@@ -74,7 +51,6 @@ export default function Footer() {
                                 <li><Link to="/#features">Features</Link></li>
                                 <li><Link to="/#how-it-works">How it works</Link></li>
                                 <li><Link to="/#families">Family Care</Link></li>
-                                <li><Link to="/#pricing">Billing</Link></li>
                             </ul>
                         </motion.div>
                         <motion.div
@@ -86,24 +62,8 @@ export default function Footer() {
                         >
                             <h4>Company</h4>
                             <ul>
-                                <li><Link to="/">About Us</Link></li>
-                                <li><Link to="/">Careers</Link></li>
-                                <li><Link to="/">Blog</Link></li>
-                                <li><Link to="/">Contact</Link></li>
-                            </ul>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.3 }}
-                            className="link-group"
-                        >
-                            <h4>Legal</h4>
-                            <ul>
-                                <li><Link to="/">Privacy Policy</Link></li>
-                                <li><Link to="/">Terms of Service</Link></li>
-                                <li><Link to="/">HIPAA Compliance</Link></li>
+                                <li><Link to="https://vadali.in">About Us</Link></li>
+                                <li><Link to="/support">Contact</Link></li>
                             </ul>
                         </motion.div>
                     </div>
@@ -111,7 +71,18 @@ export default function Footer() {
 
                 <div className="footer-bottom">
                     <div className="copyright">
-                        © 2026 VitalsPlus. All rights reserved.
+                        © 2026 Vitals+. All rights reserved.
+                    </div>
+                    <div className="footer-developed">
+                        <span className="developed-text">Developed by</span>
+                        <a
+                            href="https://vadali.in"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="developed-button"
+                        >
+                            <img src={vadaliLogo} alt="Vadali logo" />
+                        </a>
                     </div>
                     <motion.button
                         whileHover={{ scale: 1.1, x: -5 }}

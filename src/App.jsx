@@ -1,3 +1,4 @@
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import SupportPage from './pages/SupportPage';
@@ -7,7 +8,6 @@ import ScrollToTop from './components/ScrollToTop';
 import './styles/globals.css';
 
 export default function App() {
-  console.log("VitalsPlus App is mounting...");
   return (
     <Router>
       <ScrollToTop />

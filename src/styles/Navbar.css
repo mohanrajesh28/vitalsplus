@@ -28,13 +28,22 @@
 }
 
 .logo-icon-hex {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    overflow: hidden;
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .bg-vitals {
@@ -92,4 +101,122 @@
     .nav-links-wrap {
         display: none;
     }
+}
+
+/* Get Started Button */
+.btn-get-started {
+    background: linear-gradient(135deg, #2563eb 0%, #6366f1 100%);
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+}
+
+.btn-get-started:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+    filter: brightness(1.1);
+}
+
+.btn-get-started:active {
+    transform: translateY(0);
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #D9D9D9; /* Matching the exact light grey */
+    padding: 50px 40px;
+    border-radius: 60px; /* Extra large rounded corners as per image */
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.08);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3; /* Very subtle as it's not in the reference image */
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.qr-container {
+    width: 320px; /* Fixed size to ensure it stays square */
+    height: 320px;
+    margin: 40px 0;
+    background: #FFFFFF; /* Pure white */
+    border-radius: 50px; /* Large inner radius */
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+}
+
+.qr-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.modal-title {
+    font-size: 36px; /* Larger as per image */
+    font-weight: 850;
+    color: #000;
+    margin: 0;
+    letter-spacing: -0.03em;
+    font-family: inherit;
+}
+
+.modal-footer-text {
+    color: #000;
+    font-size: 26px; /* Larger as per image */
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    max-width: 90%;
 }

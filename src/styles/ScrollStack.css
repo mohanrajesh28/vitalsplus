@@ -1,157 +1,129 @@
 .scroll-stack-scroller {
-    width: 100%;
-    position: relative;
+  width: 100%;
+  position: relative;
 }
 
 /* If not using window scroll, this needs a height */
 .scroll-stack-scroller:not(.use-window-scroll) {
-    height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .scroll-stack-inner {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    padding: 50vh 0;
-    /* Ensures there's scrolling room before and after */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 50vh 0; /* Ensures there's scrolling room before and after */
 }
 
 .scroll-stack-card {
-    width: 100%;
-    max-width: 1000px;
-    position: relative;
-    border-radius: 32px;
-    background: white;
-    box-shadow: 0 15px 40px -15px rgba(0, 0, 0, 0.15);
-    padding: 60px;
-    z-index: 10;
-    transform-origin: top center;
-    transition: box-shadow 0.3s ease, border 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  border-radius: 32px;
+  background: white;
+  box-shadow: 0 15px 40px -15px rgba(0, 0, 0, 0.15);
+  padding: 60px;
+  z-index: 10;
+  transform-origin: top center;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .stack-card-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
 }
 
 .stack-card-text {
-    flex: 1;
+  flex: 1;
 }
 
 .stack-card-num {
-    font-size: 14px;
-    font-weight: 800;
-    color: #2563eb;
-    margin-bottom: 20px;
-    background: rgba(37, 99, 235, 0.1);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+  font-size: 14px;
+  font-weight: 800;
+  color: #2563eb;
+  margin-bottom: 20px;
+  background: rgba(37, 99, 235, 0.1);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .stack-card-text h3 {
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 16px;
-    letter-spacing: -0.02em;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
 }
 
 .stack-card-text p {
-    font-size: 18px;
-    color: #4b5563;
-    line-height: 1.6;
+  font-size: 18px;
+  color: #4b5563;
+  line-height: 1.6;
 }
 
 .stack-card-visual {
-    width: 160px;
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .feature-icon-circle {
-    width: 120px;
-    height: 120px;
-    background: #f1f5f9;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2563eb;
+  width: 120px;
+  height: 120px;
+  background: #f1f5f9;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
 }
 
 /* Variant Backgrounds */
-.stack-card-variant-blue-gradient {
-    border-left: 8px solid #2563eb;
-}
-
-.stack-card-variant-bright-blue {
-    border-left: 8px solid #3b82f6;
-}
-
-.stack-card-variant-pink {
-    border-left: 8px solid #ec4899;
-}
-
-.stack-card-variant-purple {
-    border-left: 8px solid #8b5cf6;
-}
-
-.stack-card-variant-black {
-    border-left: 8px solid #000000;
-}
-
-.stack-card-variant-green {
-    border-left: 8px solid #10b981;
-}
-
-.stack-card-variant-off-white {
-    border-left: 8px solid #f3f4f6;
-}
-
-.stack-card-variant-sky-blue {
-    border-left: 8px solid #0ea5e9;
-}
+.stack-card-variant-blue-gradient { border-left: 8px solid #2563eb; }
+.stack-card-variant-bright-blue { border-left: 8px solid #3b82f6; }
+.stack-card-variant-pink { border-left: 8px solid #ec4899; }
+.stack-card-variant-purple { border-left: 8px solid #8b5cf6; }
+.stack-card-variant-black { border-left: 8px solid #000000; }
+.stack-card-variant-green { border-left: 8px solid #10b981; }
+.stack-card-variant-off-white { border-left: 8px solid #f3f4f6; }
+.stack-card-variant-sky-blue { border-left: 8px solid #0ea5e9; }
 
 @media (max-width: 768px) {
-    .scroll-stack-card {
-        padding: 30px;
-    }
-
-    .stack-card-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .stack-card-num {
-        margin: 0 auto 20px;
-    }
-
-    .stack-card-text h3 {
-        font-size: 24px;
-    }
-
-    .stack-card-text p {
-        font-size: 16px;
-    }
+  .scroll-stack-card {
+    padding: 30px;
+  }
+  .stack-card-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .stack-card-num {
+    margin: 0 auto 20px;
+  }
+  .stack-card-text h3 {
+    font-size: 24px;
+  }
+  .stack-card-text p {
+    font-size: 16px;
+  }
 }
 
 .scroll-stack-end {
-    height: 100vh;
-    width: 100%;
-    pointer-events: none;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
 }
