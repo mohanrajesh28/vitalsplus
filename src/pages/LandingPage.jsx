@@ -11,6 +11,7 @@ import ShapeGrid from '../components/ShapeGrid';
 import DIV1 from '../assets/DIV1.png';
 import DIV2 from '../assets/DIV2.png';
 import DIV3 from '../assets/DIV3.png';
+import LogoImage from '../assets/Logo.png';
 import '../styles/LandingPage.css';
 
 const features = [
@@ -254,8 +255,8 @@ export default function LandingPage() {
                 <div className="container">
                      <div className="section-header centered">
                         <div className="section-tag">Comparison</div>
-                        <h2 className="section-title">VitalsPlus vs everything else</h2>
-                        <p className="section-subtitle">See why families choose VitalsPlus over paper files, scattered apps, and hospital portals.</p>
+                        <h2 className="section-title">Vitals+ vs everything else</h2>
+                        <p className="section-subtitle">See why families choose Vitals+ over paper files, scattered apps, and hospital portals.</p>
                     </div>
 
                     <div className="comparison-grid-container">
@@ -280,9 +281,9 @@ export default function LandingPage() {
                                 <div className="grid-header-cell highlight-header">
                                     <div className="header-brand">
                                         <div className="brand-logo-hex logo-vitals">
-                                            <HeartPulse size={28} color="white" />
+                                            <img src={LogoImage} alt="VitalsPlus logo" className="brand-logo-img" />
                                         </div>
-                                        <span className="brand-name">VitalsPlus</span>
+                                        <span className="brand-name">Vitals+</span>
                                         <span className="best-tag">BEST CHOICE</span>
                                     </div>
                                 </div>

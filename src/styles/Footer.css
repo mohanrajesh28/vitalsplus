@@ -185,21 +185,23 @@
 .developed-button {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 18px;
+    gap: 12px;
+    padding: 14px 22px;
     border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     background: #fff;
     color: #000;
+    font-size: 14px;
+    font-weight: 700;
     text-decoration: none;
     transition: all 0.25s ease;
 }
 
 .developed-button img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .developed-button:hover {
