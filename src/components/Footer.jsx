@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import logoImage from '../assets/Group 221.png';
-import qrCodeImage from '../assets/qr_code.png';
+import qrCodeImage from '../assets/qr-scan.svg';
 import vadaliLogo from '../assets/image.webp';
 import '../styles/Footer.css';
 
@@ -74,7 +74,7 @@ export default function Footer() {
                         © 2026 Vitals+. All rights reserved.
                     </div>
                     <div className="footer-developed">
-                        <span className="developed-text">Developed by</span>
+                        <span className="developed-text">DEVELOPED BY</span>
                         <a
                             href="https://vadali.in"
                             target="_blank"

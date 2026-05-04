@@ -87,7 +87,7 @@
   font-size: 120px;
   font-weight: 900;
   line-height: 0.85;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.03em;
   margin-bottom: 32px;
   color: #000;
   text-align: center;
@@ -100,7 +100,7 @@
 
 .hero-handwritten-text {
   position: absolute;
-  bottom: -10px;
+  bottom: -30px;
   right: -80px;
   font-family: 'Caveat', cursive;
   font-size: 36px;
@@ -253,6 +253,12 @@
 
 .app-download-btn svg {
   color: #fff;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .btn-label {
@@ -1525,6 +1531,10 @@
   color: #0f172a;
   border: 2px solid #e2e8f0;
   padding: 12px 24px;
+}
+
+.app-download-btn.outline svg {
+  color: #0f172a;
 }
 
 .app-download-btn.outline:hover {

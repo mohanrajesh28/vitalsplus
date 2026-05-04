@@ -7,9 +7,12 @@ import {
 } from 'lucide-react';
 import ScrollingTags from '../components/ScrollingTags';
 import ShapeGrid from '../components/ShapeGrid';
-import DIV1 from '../assets/DIV1.png';
-import DIV2 from '../assets/DIV2.png';
-import DIV3 from '../assets/DIV3.png';
+import Waves from '../components/Waves';
+import AppleLogoImg from '../assets/Icons:Logos/Apple_logo_black.svg.png';
+import AndroidLogoImg from '../assets/Icons:Logos/android.png';
+import ai1 from '../assets/ai/ai1.png';
+import ai2 from '../assets/ai/ai2.png';
+import ai3 from '../assets/ai/ai3.png';
 import LogoImage from '../assets/Logo.png';
 import '../styles/LandingPage.css';
 
@@ -23,14 +26,14 @@ const features = [
 ];
 
 const comparisonData = [
-    { feature: 'AI Report Analysis', vitals: true, paper: false, app: false, portal: false },
-    { feature: 'Plain English Explanations', vitals: true, paper: false, app: false, portal: false },
-    { feature: 'Abnormal Value Alerts', vitals: true, paper: false, app: 'partial', portal: false },
-    { feature: 'Trend Graphs', vitals: true, paper: false, app: 'partial', portal: 'partial' },
-    { feature: 'Family Profiles', vitals: true, paper: false, app: false, portal: false },
-    { feature: 'PDF Upload', vitals: true, paper: false, app: 'partial', portal: false },
-    { feature: 'Report Comparison', vitals: true, paper: false, app: false, portal: false },
-    { feature: 'Works Offline', vitals: true, paper: true, app: false, portal: 'partial' },
+    { feature: 'AI Report Analysis', vitals: true, SamsungHealth: false, Fitbit: false, GoogleFit: false },
+    { feature: 'Plain English Explanations', vitals: true, SamsungHealth: false, Fitbit: false, GoogleFit: false },
+    { feature: 'Abnormal Value Alerts', vitals: true, SamsungHealth: 'partial', Fitbit: 'partial', GoogleFit: 'partial' },
+    { feature: 'Trend Graphs', vitals: true, SamsungHealth: true, Fitbit: true, GoogleFit: true },
+    { feature: 'Family Profiles', vitals: true, SamsungHealth: false, Fitbit: false, GoogleFit: false },
+    { feature: 'PDF Upload', vitals: true, SamsungHealth: false, Fitbit: 'partial', GoogleFit: 'partial' },
+    { feature: 'Report Comparison', vitals: true, SamsungHealth: false, Fitbit: false, GoogleFit: false },
+    { feature: 'Works Offline', vitals: true, SamsungHealth: true, Fitbit: 'partial', GoogleFit: 'partial' },
 ];
 
 const testimonials = [
@@ -47,6 +50,7 @@ export default function LandingPage() {
         <div className="landing-page">
             {/* Hero Section */}
             <section className="hero">
+                <Waves lineColor="rgba(0, 0, 0, 0.12)" backgroundColor="transparent" />
                 <div className="container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -54,8 +58,8 @@ export default function LandingPage() {
                         viewport={{ once: true }}
                         className="hero-content"
                     >
-                        <h1 className="hero-title" aria-label="Built your Health journey with vitals">
-                            {["Built", "your"].map((word, i) => (
+                        <h1 className="hero-title" aria-label="Build your Health journey with vitals">
+                            {["Build", "your"].map((word, i) => (
                                 <motion.span
                                     key={i}
                                     initial={{ opacity: 0, y: 30 }}
@@ -87,7 +91,7 @@ export default function LandingPage() {
                             </motion.span>
                         </h1>
                         <p className="hero-subtitle">
-                            Every feature in VitalsPlus is designed to turn confusing medical <br />
+                            Every feature in Vitals+ is designed to turn confusing medical <br />
                             data into clear, actionable insights — for you and your whole family.
                         </p>
 
@@ -124,7 +128,7 @@ export default function LandingPage() {
 
                         <div className="preview-downloads-horizontal">
                             <div className="download-text">
-                                <h3>Take control of your health today</h3>
+                                <h3>Take charge of your health journey</h3>
                                 <p>Available for iOS and Android</p>
                             </div>
                             <div className="download-buttons-flex">
@@ -134,6 +138,7 @@ export default function LandingPage() {
                                     className="app-download-btn outline"
                                     aria-label="Download VitalsPlus on the App Store"
                                 >
+                                    <img src={AppleLogoImg} alt="Apple logo" className="btn-icon" />
                                     <div className="btn-label">
                                         <span>Download for</span>
                                         <strong>iOS</strong>
@@ -145,6 +150,7 @@ export default function LandingPage() {
                                     className="app-download-btn outline"
                                     aria-label="Get VitalsPlus on Google Play"
                                 >
+                                    <img src={AndroidLogoImg} alt="Android logo" className="btn-icon" />
                                     <div className="btn-label">
                                         <span>Download for</span>
                                         <strong>Android</strong>
@@ -175,7 +181,7 @@ export default function LandingPage() {
                         >
                             <div className="card-illustration card-white-block">
                                 <img 
-                                    src={DIV1}
+                                    src={ai1}
                                     alt="AI Analysis" 
                                     className="feature-card-img"
                                     referrerPolicy="no-referrer"
@@ -186,7 +192,7 @@ export default function LandingPage() {
                                 <p>Instantly scan and understand complex lab reports in plain, simple English.</p>
                                 <div className="card-footer-link">
                                     <a href="https://www.gitbook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
-                                        <strong>Learn More</strong><ArrowRight size={16} />
+                                        <strong>Learn More</strong><ArrowRight size={12} />
                                     </a>
                                 </div>
                             </div>
@@ -202,18 +208,18 @@ export default function LandingPage() {
                         >
                             <div className="card-illustration card-white-block">
                                 <img 
-                                    src={DIV2}
+                                    src={ai2}
                                     alt="Health Tracking" 
                                     className="feature-card-img"
                                     referrerPolicy="no-referrer"
                                 />
                             </div>
                             <div className="card-text-content">
-                                <h3><a href="https://www.gitbook.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-600 transition-colors">Health Trend Tracking</a></h3>
+                                <h3>Health Trend Tracking</h3>
                                 <p>Track your health timeline with beautiful, interactive visualizations and patterns.</p>
                                 <div className="card-footer-link">
                                     <a href="https://www.gitbook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
-                                        <strong>Learn More</strong><ArrowRight size={16} />
+                                        <strong>Learn More</strong><ArrowRight size={12} />
                                     </a>
                                 </div>
                             </div>
@@ -229,7 +235,7 @@ export default function LandingPage() {
                         >
                             <div className="card-illustration card-white-block">
                                 <img 
-                                    src={DIV3}
+                                    src={ai3}
                                     alt="Family Health" 
                                     className="feature-card-img"
                                     referrerPolicy="no-referrer"
@@ -240,7 +246,7 @@ export default function LandingPage() {
                                 <p>One secure digital home for every family member's medical history & vitals.</p>
                                 <div className="card-footer-link">
                                     <a href="https://www.gitbook.com" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors">
-                                        <strong>Learn More</strong><ArrowRight size={16} />
+                                        <strong>Learn More</strong><ArrowRight size={12} />
                                     </a>
                                 </div>
                             </div>
@@ -290,10 +296,10 @@ export default function LandingPage() {
 
                             {/* Other Columns */}
                             {[
-                                { name: "Paper Files", color: "#F3BA2F", icon: <Activity size={24} color="white" />, dataKey: 'paper' },
-                                { name: "Other Apps", color: "#0052FF", icon: <Smartphone size={24} color="white" />, dataKey: 'app' },
-                                { name: "Hos Portals", color: "#000000", icon: <Globe size={24} color="white" />, dataKey: 'portal' },
-                                { name: "Legacy SW", color: "#5835FF", icon: <TrendingUp size={24} color="white" />, dataKey: 'legacy' }
+                                { name: "Samsung Health", color: "#ffff", icon: <img src="src/assets/Icons:Logos/samsung.png" alt="VitalsPlus logo" className="brand-logo-img" />, dataKey: 'samsunghealth' },
+                                { name: "FitBit", color: "#fff", icon: <img src="src/assets/Icons:Logos/fitbit.png" alt="VitalsPlus logo" className="brand-logo-img" />, dataKey: 'fitbit' },
+                                { name: "Google Fit", color: "#fff", icon: <img src="src/assets/Icons:Logos/googlefit.png" alt="VitalsPlus logo" className="brand-logo-img" />, dataKey: 'googlefit' },
+                                { name: "My Fitness Pal", color: "#fff", icon: <img src="src/assets/Icons:Logos/unnamed.jpg" alt="VitalsPlus logo" className="brand-logo-img" />, dataKey: 'legacy' }
                             ].map((col, ci) => (
                                 <div className="grid-column" key={ci}>
                                     <div className="grid-header-cell">
