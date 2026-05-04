@@ -1788,19 +1788,6 @@
   align-items: stretch;
 }
 
-.comparison-grid .border-glow-card {
-  cursor: default;
-}
-
-.comparison-grid .border-glow-card:hover {
-  background: transparent;
-}
-
-.comparison-grid .border-glow-card:hover .edge-light,
-.comparison-grid .border-glow-card:hover .border-glow-inner::after {
-  opacity: 0 !important;
-}
-
 .grid-column {
   flex: 1;
   display: flex;
@@ -1844,20 +1831,10 @@
 .highlight-column {
   z-index: 10;
   position: relative;
-  border: 2px solid #3b82f6 !important;
-  background-color: #f0f7ff !important;
-  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.15);
-  overflow: visible !important;
-}
-
-.highlight-column::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(37,99,235,0.14) 40%, rgba(59,130,246,0.18) 50%, rgba(37,99,235,0.14) 60%, rgba(255,255,255,0) 100%);
-  pointer-events: none;
-  opacity: 0.75;
+  border: 2px solid rgba(37, 99, 235, 0.55);
+  background-color: transparent !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
 }
 
 .best-tag {
@@ -1899,7 +1876,7 @@
 }
 
 .highlight-column .grid-cell:nth-child(even) {
-  background-color: rgba(37, 99, 235, 0.03); 
+  background-color: transparent;
 }
 
 .highlight-column .grid-cell,

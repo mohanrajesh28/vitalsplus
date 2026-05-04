@@ -6,7 +6,6 @@ import {
     Clock, Calendar, Copy, FileChartPie, Sliders, Bell, User, ArrowRight, Search
 } from 'lucide-react';
 import ScrollingTags from '../components/ScrollingTags';
-import BorderGlow from '../components/BorderGlow';
 import ShapeGrid from '../components/ShapeGrid';
 import DIV1 from '../assets/DIV1.png';
 import DIV2 from '../assets/DIV2.png';
@@ -270,14 +269,7 @@ export default function LandingPage() {
                             </div>
                             
                             {/* VitalsPlus Highlighted Column */}
-                            <BorderGlow 
-                                className="grid-column highlight-column"
-                                glowColor="210 100 50"
-                                fillOpacity={0.12}
-                                borderRadius={16}
-                                animated={true}
-                                glowIntensity={1.2}
-                            >
+                            <div className="grid-column highlight-column">
                                 <div className="grid-header-cell highlight-header">
                                     <div className="header-brand">
                                         <div className="brand-logo-hex logo-vitals">
@@ -294,7 +286,7 @@ export default function LandingPage() {
                                         </div>
                                     </div>
                                 ))}
-                            </BorderGlow>
+                            </div>
 
                             {/* Other Columns */}
                             {[
