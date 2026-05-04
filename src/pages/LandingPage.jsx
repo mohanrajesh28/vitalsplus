@@ -10,6 +10,10 @@ import ShapeGrid from '../components/ShapeGrid';
 import Waves from '../components/Waves';
 import AppleLogoImg from '../assets/Icons:Logos/Apple_logo_black.svg.png';
 import AndroidLogoImg from '../assets/Icons:Logos/android.png';
+import SamsungLogoImg from '../assets/Icons:Logos/samsung.png';
+import FitbitLogoImg from '../assets/Icons:Logos/fitbit.png';
+import GoogleFitLogoImg from '../assets/Icons:Logos/googlefit.png';
+import MyFitnessPalLogoImg from '../assets/Icons:Logos/unnamed.jpg';
 import ai1 from '../assets/ai/ai1.png';
 import ai2 from '../assets/ai/ai2.png';
 import ai3 from '../assets/ai/ai3.png';
@@ -296,10 +300,10 @@ export default function LandingPage() {
 
                             {/* Other Columns */}
                             {[
-                                { name: "Samsung Health", color: "#ffff", icon: <img src="src/assets/Icons:Logos/samsung.png" alt="VitalsPlus logo" className="brand-logo-img" />, dataKey: 'samsunghealth' },
-                                { name: "FitBit", color: "#fff", icon: <img src="src/assets/Icons:Logos/fitbit.png" alt="VitalsPlus logo" className="brand-logo-img" />, dataKey: 'fitbit' },
-                                { name: "Google Fit", color: "#fff", icon: <img src="src/assets/Icons:Logos/googlefit.png" alt="VitalsPlus logo" className="brand-logo-img" />, dataKey: 'googlefit' },
-                                { name: "My Fitness Pal", color: "#fff", icon: <img src="src/assets/Icons:Logos/unnamed.jpg" alt="VitalsPlus logo" className="brand-logo-img" />, dataKey: 'legacy' }
+                                { name: "Samsung Health", color: "#fff", icon: <img src={SamsungLogoImg} alt="Samsung Health logo" className="brand-logo-img" />, dataKey: 'samsunghealth' },
+                                { name: "FitBit", color: "#fff", icon: <img src={FitbitLogoImg} alt="FitBit logo" className="brand-logo-img" />, dataKey: 'fitbit' },
+                                { name: "Google Fit", color: "#fff", icon: <img src={GoogleFitLogoImg} alt="Google Fit logo" className="brand-logo-img" />, dataKey: 'googlefit' },
+                                { name: "My Fitness Pal", color: "#fff", icon: <img src={MyFitnessPalLogoImg} alt="My Fitness Pal logo" className="brand-logo-img" />, dataKey: 'legacy' }
                             ].map((col, ci) => (
                                 <div className="grid-column" key={ci}>
                                     <div className="grid-header-cell">
